@@ -7,6 +7,7 @@ from config import *
 from preprocess.trim import loadPrepareData
 from model.Seq2Seq import EncoderRNN, LuongAttnDecoderRNN, GreedySearchDecoder
 from eval.eval import evaluateInput
+from torch import nn
 
 # Set checkpoint to load from; set to None if starting from scratch
 loadFilename = os.path.join(save_dir, model_name, corpus_name,
