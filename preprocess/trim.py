@@ -3,7 +3,8 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 from config import *
-
+import re
+import unicodedata
 
 
 class Voc:
@@ -139,6 +140,3 @@ def trimRareWords(voc, pairs, MIN_COUNT):
     print("Trimmed from {} pairs to {}, {:.4f} of total".format(len(pairs), len(keep_pairs),
                                                                 len(keep_pairs) / len(pairs)))
     return keep_pairs
-
-
-

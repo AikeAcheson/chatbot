@@ -45,10 +45,6 @@ encoder = encoder.to(device)
 decoder = decoder.to(device)
 print('Models built and ready to go!')
 
-# Ensure dropout layers are in train mode
-encoder.train()
-decoder.train()
-
 # Set dropout layers to eval mode
 encoder.eval()
 decoder.eval()
@@ -56,5 +52,5 @@ decoder.eval()
 # Initialize search module
 searcher = GreedySearchDecoder(encoder, decoder)
 
-# Begin chatting (uncomment and run the following line to begin)
+# Begin chatting
 evaluateInput(encoder, decoder, searcher, voc)
